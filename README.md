@@ -1,3 +1,0 @@
-# zen
-
-to-do list
