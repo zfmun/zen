@@ -1,9 +1,9 @@
-import { ModeToggle } from "@/components/ui/mode-toggle";
+import { HabitHeatmap } from "@/components/ui/heatmap";
 
 export default function Home() {
   return (
-    <div>
-      <ModeToggle></ModeToggle>
+    <div className="">
+      <HabitHeatmap></HabitHeatmap>
     </div>
   );
 }

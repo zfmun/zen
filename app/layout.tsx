@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
+import { NavMenu } from "@/components/ui/header";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "zen",
+  title: "zen.",
   description: "habit tracker",
 };
 
@@ -34,6 +36,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="py-4 flex flex-row">
+            <div className="flex justify-start">
+              <p className="pl-8 text-lg font-semibold">
+                zen.
+              </p>
+            </div>
+            <div className="flex w-full justify-end gap-2">
+              <NavMenu></NavMenu>
+              <ModeToggle></ModeToggle>
+            </div>
+          </div>
           {children}
         </ThemeProvider>
       </body>
